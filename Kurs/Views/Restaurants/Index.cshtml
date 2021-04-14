@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Kurs.Data.Models.Restaurant>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Dodaj restoran </h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@foreach(var item in Model)
+{
+    @Html.Partial("_RestaurantSummary", item)
+}
+
+
+
